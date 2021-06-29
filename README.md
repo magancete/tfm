@@ -14,11 +14,11 @@ El objetivo principal del trabajo es el diseño de un coche robótico controlado
 
 ### Sesión 1
 
-###### Ejercicio 1
+##### Ejercicio 1
 > Utilizando el LED incorporado en la placa (pin 13) escribe un código que haga que el led se encienda durante 1 segundo y se repita cada 5 segundos.
-###### Ejercicio 2
+##### Ejercicio 2
 > Partiendo del ejercicio anterior, que cada vez que se encienda el LED, se escriba por la consola: “LED ENCENDIDO”.
-###### Ejercicio 3
+##### Ejercicio 3
 > Escribe un código que encienda el LED durante si la placa recibe el comando serial ‘Y’ y que lo apague si recibe el comando ‘N’.
 
 ### Sesión 2
