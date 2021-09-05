@@ -7,6 +7,7 @@ El objetivo principal del trabajo es el diseño de un coche robótico controlado
 * Arduino IDE
 * Arduino MEGA
 * Raspberry Pi
+* OSOYOO V2.1 ROBOT CAR KIT
 * Servidor MQTT (Mosquitto https://mosquitto.org/) 
 * Librería WiFiEsp (https://github.com/bportaluri/WiFiEsp)
 * Librería PubSub (https://github.com/knolleary/pubsubclient)
