@@ -73,8 +73,6 @@ void setup() {
 
   stop_Stop();
 
-  go_Advance();
-
 }
 
 void loop() {
@@ -83,15 +81,33 @@ void loop() {
 
     char c = Serial.read();
 
-    if (c == 'G'){
+    switch (c){
+      case 'A':
+      go_Advance();
+      break;
+      case 'L':
+      go_Left();
+      break;
+      case 'R':
+      go_Right();
+      break;
+      case 'B':
+      go_Back();
+      break;
+      case 'S':
+      stop_Stop();
+      break;
+      case 'G':
       SPEED=SPEED+10;
       set_Motorspeed(SPEED,SPEED);
-
-    }else if(c == 'j'){
+      break;
+      case 'J':
       SPEED=SPEED-10;
       set_Motorspeed(SPEED,SPEED);
+      break;
+      default:
+      break;
     }
 
   }
-
 }
