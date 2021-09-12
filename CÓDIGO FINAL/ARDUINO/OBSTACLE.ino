@@ -166,7 +166,7 @@ void auto_avoidance(){
      stop_Stop();
   }  
   
-  distance = watch();
+  int distance = calc_distancia();
   if (distance<distancelimit){ 
     go_Right();
     set_Motorspeed( SPEED,FAST_SPEED);

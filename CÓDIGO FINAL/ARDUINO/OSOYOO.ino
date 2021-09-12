@@ -41,9 +41,6 @@
 #define LFSensor_3 A3
 #define LFSensor_4 A4
 
-#define GPS_SOFT_RX 15 // GPS Softserial RX port
-#define GPS_SOFT_TX 14 // GPS Softserial TX port
-
 #define LEFT_TURN_TIME 300
 #define RIGHT_TURN_TIME 300
 #define AHEAD_TIME 300
