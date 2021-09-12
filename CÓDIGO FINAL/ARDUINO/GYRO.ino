@@ -1,16 +1,3 @@
-#include "I2Cdev.h"
-#include "MPU6050_6Axis_MotionApps20.h"
-#if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-    #include "Wire.h"
-#endif
-
-#define PIN_MPU_INTERRUPT 2
-
-/* MPU SETTINGS */
-MPU6050 mpu;
-
-long lastMsg = 0;
-
 bool dmpReady = false;  // set true if DMP init was successful
 uint8_t mpuIntStatus;   // holds actual interrupt status byte from MPU
 uint8_t devStatus;      // return status after each device operation (0 = success, !0 = error)
@@ -85,32 +72,10 @@ void setupMpu(){
 
 }
 
-void get_gyro(){
-
+void get_gyro(){  
+   
   String gyro = String(ypr[0] * 180/M_PI) + "|" + String(ypr[1] * 180/M_PI) + "|" + String(ypr[2] * 180/M_PI) + "|" + String(aaReal.x) + "|" + String(aaReal.y) + "|" + String(aaReal.z);
-
-  publisToTopic("gyro", gyro);
-
-}
-
-void setup() {
-
-  /* INITIALICE PINS */
-  Serial.begin(9600);
-  Serial2.begin(9600);
-
-  setupMpu();
-
-}
-
-void loop(){
-
-  if (now - lastMsg > 5000) {
-
-      lastMsg = now;
-
-      get_gyro();
-
-    }
+  
+  publisToTopic("gyro", gyro);   
 
 }
